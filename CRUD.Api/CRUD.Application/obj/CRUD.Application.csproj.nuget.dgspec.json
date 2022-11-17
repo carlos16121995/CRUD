@@ -1,0 +1,208 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Application\\CRUD.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Application\\CRUD.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Application\\CRUD.Application.csproj",
+        "projectName": "CRUD.Application",
+        "projectPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Application\\CRUD.Application.csproj",
+        "packagesPath": "C:\\Users\\carlos.alcantara\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\carlos.alcantara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj": {
+                "projectPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj"
+              },
+              "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Infrastructure\\CRUD.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Infrastructure\\CRUD.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj",
+        "projectName": "CRUD.Domain",
+        "projectPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj",
+        "packagesPath": "C:\\Users\\carlos.alcantara\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\carlos.alcantara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Infrastructure\\CRUD.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Infrastructure\\CRUD.Infrastructure.csproj",
+        "projectName": "CRUD.Infrastructure",
+        "projectPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Infrastructure\\CRUD.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\carlos.alcantara\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\carlos.alcantara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj": {
+                "projectPath": "C:\\Users\\carlos.alcantara\\source\\repos\\CRUD\\CRUD.Api\\CRUD.Domain\\CRUD.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.AssemblyInfo.cs
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Infrastructure.deps.json
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Infrastructure.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Infrastructure.pdb
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Domain.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\bin\Debug\net6.0\CRUD.Domain.pdb
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.csproj.CopyComplete
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\refint\CRUD.Infrastructure.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\CRUD.Infrastructure.pdb
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Infrastructure\obj\Debug\net6.0\ref\CRUD.Infrastructure.dll
