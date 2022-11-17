@@ -1,4 +1,4 @@
-﻿namespace CRUD.Domain.Infra.Paginations
+﻿namespace CRUD.Domain.Infra.Requests
 {
     public class BasePagedRequest
     {

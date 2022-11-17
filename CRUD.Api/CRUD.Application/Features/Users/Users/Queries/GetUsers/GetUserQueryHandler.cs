@@ -1,4 +1,5 @@
-﻿using CRUD.Domain.Entities.Users;
+﻿using CRUD.Application.Features.Users.Addressess.Queries.GetAddress;
+using CRUD.Domain.Entities.Users;
 using CRUD.Domain.Infra.Responses;
 using CRUD.Infrastructure.Extensions;
 using CRUD.Infrastructure.Persistence;
@@ -6,7 +7,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace CRUD.Application.Features.Users.Users.Queries.GetUser
+namespace CRUD.Application.Features.Users.Users.Queries.GetUsers
 {
     /// <summary>
     /// 
@@ -43,10 +44,31 @@ namespace CRUD.Application.Features.Users.Users.Queries.GetUser
                         Activated = user.Activated,
                         CreatedAt = user.CreatedAt,
                         UpdateAt = user.UpdatedAt,
+                        Addresses = request.Address ? MapAddress(user) : new()
                     }).GetPagedListAsync<BasePagedResponse<GetUserQueryResponse>, GetUserQueryResponse>(request);
             }
             catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
         }
+
+        private static List<GetAddressQueryResponse> MapAddress(User user) => user.Addresses.Where(a => !a.Deleted)
+                                                                            .Select(a => new GetAddressQueryResponse()
+                                                                            {
+                                                                                Id = a.Id,
+                                                                                UserId = a.UserId,
+                                                                                CityId = a.CityId,
+                                                                                CityName = a.City!.Name,
+                                                                                UF = a.City.UF,
+                                                                                StateName = a.City!.State!.Name,
+                                                                                ZipCode = a.ZipCode,
+                                                                                AddressType = a.AddressType,
+                                                                                Neighborhood = a.Neighborhood,
+                                                                                Street = a.Street,
+                                                                                Number = a.Number,
+                                                                                Complement = a.Complement,
+                                                                                CreatedAt = a.CreatedAt,
+                                                                                UpdateAt = a.UpdatedAt,
+                                                                                Activated = a.Activated
+                                                                            }).ToList();
 
         private static Expression<Func<User, bool>> Where(GetUserQuery query)
         {

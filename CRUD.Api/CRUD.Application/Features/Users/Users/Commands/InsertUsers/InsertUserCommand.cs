@@ -13,6 +13,7 @@ namespace CRUD.Application.Features.Users.Users.Commands.InsertUsers
         /// Nome completo do usuário.
         /// </summary>
         [Required]
+        [MaxLength(64)]
         public string Name { get; set; } = string.Empty;
         /// <summary>
         /// Data de aniversário do usuário.

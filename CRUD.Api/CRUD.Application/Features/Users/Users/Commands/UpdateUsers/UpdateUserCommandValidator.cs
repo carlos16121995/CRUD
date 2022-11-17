@@ -1,4 +1,4 @@
-﻿using CRUD.Application.Features.Users.Users.InsertUser;
+﻿using CRUD.Application.Features.Users.Users.Commands.InsertUsers;
 using CRUD.Infrastructure.Persistence;
 using FluentValidation;
 

@@ -1,4 +1,4 @@
-﻿using CRUD.Domain.Infra.Paginations;
+﻿using CRUD.Domain.Infra.Requests;
 using CRUD.Domain.Infra.Responses;
 using Microsoft.EntityFrameworkCore;
 

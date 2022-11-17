@@ -1,10 +1,14 @@
-﻿namespace CRUD.Domain.Entities.Users.Addresses
+﻿using CRUD.Domain.Enums;
+
+namespace CRUD.Domain.Entities.Users.Addresses
 {
     public class Address : BaseEntity<Guid>
     {
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         public int CityId { get; set; }
+
+        public EAddressType AddressType { get; set; }
 
         public string ZipCode { get; set; } = string.Empty;
 
