@@ -1,4 +1,4 @@
-﻿namespace CRUD.Infrastructure.Swagger
+﻿namespace CRUD.Api.Swagger
 {
     /// <summary>
     /// 

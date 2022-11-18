@@ -1,7 +1,6 @@
 // Copyright (c) 2022, Unidas. All rights reserved
 // PRIVATE SOURCE. Any kind of unauthorized use is prohibited.
 
-using CRUD.Infrastructure.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
@@ -12,7 +11,7 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 
-namespace CRUD.Infrastructure.Swagger
+namespace CRUD.Api.Swagger
 {
     /// <summary>
     /// 

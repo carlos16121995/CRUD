@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Text;
 
-namespace CRUD.Infrastructure.Swagger
+namespace CRUD.Api.Swagger
 {
     /// <summary>
     /// 

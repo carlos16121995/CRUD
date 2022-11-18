@@ -5,7 +5,7 @@ using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace CRUD.Infrastructure.Swagger
+namespace CRUD.Api.Swagger
 {
     /// <summary>
     /// 

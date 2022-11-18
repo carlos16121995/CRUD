@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using CRUD.Application.Features.Users.Users.Commands.InsertUsers;
 using Newtonsoft.Json;
-using CRUD.Infrastructure.Swagger;
+using CRUD.Api.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 
