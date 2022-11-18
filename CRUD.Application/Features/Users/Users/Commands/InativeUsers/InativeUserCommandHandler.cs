@@ -1,4 +1,5 @@
 ﻿using CRUD.Domain.Entities.Users;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Infrastructure.Persistence;
 using CRUD.Infrastructure.Repositories;
 using MediatR;
@@ -34,17 +35,25 @@ namespace CRUD.Application.Features.Users.Users.Commands.InativeUsers
                     await _context.UpdateAsync<User, Guid>((user) => user.Id.Equals(request.Id), (u) =>
                     {
                         u.Delete();
+                        u.Addresses.ToList().ForEach(a =>
+                        {
+                            a.Delete();
+                        });
                     });
 
                 else
                     await _context.UpdateAsync<User, Guid>((user) => user.Id.Equals(request.Id), (u) =>
                     {
                         u.Inactivate();
+                        u.Addresses.ToList().ForEach(a =>
+                        {
+                            a.Inactivate();
+                        });
                     });
 
                 return Unit.Value;
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao inativar usuários", ex); } 
         }
     }
 }

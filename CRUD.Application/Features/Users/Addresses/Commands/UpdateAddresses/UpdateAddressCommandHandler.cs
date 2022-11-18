@@ -5,6 +5,7 @@ using MediatR;
 namespace CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses
 {
     using CRUD.Domain.Entities.Users.Addresses;
+    using CRUD.Domain.Infra.Exceptions;
 
     /// <summary>
     /// 
@@ -47,7 +48,7 @@ namespace CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses
 
                 return Unit.Value;
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao alterar endereços.", ex); }
         }
     }
 }

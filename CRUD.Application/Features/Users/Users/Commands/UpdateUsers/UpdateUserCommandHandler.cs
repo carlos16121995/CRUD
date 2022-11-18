@@ -1,4 +1,5 @@
 ﻿using CRUD.Domain.Entities.Users;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Infrastructure.Persistence;
 using CRUD.Infrastructure.Repositories;
 using MediatR;
@@ -42,7 +43,7 @@ namespace CRUD.Application.Features.Users.Users.Commands.UpdateUsers
 
                 return Unit.Value;
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao alterar usuários.", ex); }
         }
     }
 }

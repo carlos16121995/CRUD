@@ -1,4 +1,5 @@
-﻿using CRUD.Infrastructure.Persistence;
+﻿using CRUD.Domain.Infra.Exceptions;
+using CRUD.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,7 +35,7 @@ namespace CRUD.Application.Features.Users.Users.Commands.RemoveUsers
 
                 return Unit.Value;
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao remover usuários.", ex); }
         }
     }
 }

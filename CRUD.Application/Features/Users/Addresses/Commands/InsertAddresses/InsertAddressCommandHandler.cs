@@ -5,6 +5,7 @@ namespace CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses
     using CRUD.Infrastructure.Persistence;
     using CRUD.Infrastructure.Repositories;
     using CRUD.Domain.Entities.Users.Addresses;
+    using CRUD.Domain.Infra.Exceptions;
 
     /// <summary>
     /// 
@@ -48,7 +49,7 @@ namespace CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses
                     Id = id
                 };
             }
-            catch (Exception ex) { throw new Exception(); } //TODO: Menasgem de erro
+            catch (Exception ex) { throw new CrudException("Falha ao inserir endereços.", ex); } 
         }
     }
 }

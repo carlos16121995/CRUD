@@ -3,6 +3,7 @@
 namespace CRUD.Application.Features.Users.Users.Commands.InsertUsers
 {
     using CRUD.Domain.Entities.Users;
+    using CRUD.Domain.Infra.Exceptions;
     using CRUD.Infrastructure.Persistence;
     using CRUD.Infrastructure.Repositories;
 
@@ -44,7 +45,7 @@ namespace CRUD.Application.Features.Users.Users.Commands.InsertUsers
                     Id = id
                 };
             }
-            catch (Exception ex) { throw new Exception(); } //TODO: Menasgem de erro
+            catch (Exception ex) { throw new CrudException("Falha ao inserir usuários.", ex); }
         }
     }
 }

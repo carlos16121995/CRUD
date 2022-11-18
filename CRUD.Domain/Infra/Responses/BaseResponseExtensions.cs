@@ -10,7 +10,7 @@ namespace CRUD.Domain.Infra.Responses
         public static void MontarErro<T>(this BaseResponse<T> response, Exception ex, string genericMessage = "Ocorreu um erro inesperado ao processar a sua solicitação. Verifique os dados e tente novamente.")
         {
             response.Success = false;
-            response.Data = default(T);
+            response.Data = default;
             if (ex is CrudException)
             {
                 CrudException ex2 = ex as CrudException ?? new();
@@ -26,7 +26,7 @@ namespace CRUD.Domain.Infra.Responses
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void MontarErro<T>(this BaseResponse<T> response, IEnumerable<ErrorModel> Errors, Exception? ex = null) where T : class
+        public static void MontarErro<T>(this BaseResponse<T> response, IEnumerable<ErrorModel> Errors) where T : class
         {
             response.Success = false;
             response.Errors = Errors;
@@ -53,7 +53,7 @@ namespace CRUD.Domain.Infra.Responses
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void MontarErro<T>(this BasePagedResponse<T> response, IEnumerable<ErrorModel> Errors, Exception? ex = null) where T : class
+        public static void MontarErro<T>(this BasePagedResponse<T> response, IEnumerable<ErrorModel> Errors) where T : class
         {
             response.Success = false;
             response.Errors = Errors;

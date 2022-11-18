@@ -1,4 +1,5 @@
 ﻿using CRUD.Domain.Entities.Localities;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Domain.Infra.Responses;
 using CRUD.Infrastructure.Extensions;
 using CRUD.Infrastructure.Persistence;
@@ -42,7 +43,7 @@ namespace CRUD.Application.Features.Localities.Cities.Queries.GetCities
                         Activated = city.Activated,
                     }).GetPagedListAsync<BasePagedResponse<GetCityQueryResponse>, GetCityQueryResponse>(request);
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao recuperar cidades.", ex); }
         }
 
         private static Expression<Func<City, bool>> Where(GetCityQuery query)

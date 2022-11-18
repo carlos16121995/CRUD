@@ -1,4 +1,5 @@
 ﻿using CRUD.Domain.Entities.Users.Addresses;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Infrastructure.Persistence;
 using CRUD.Infrastructure.Repositories;
 using MediatR;
@@ -44,7 +45,7 @@ namespace CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses
 
                 return Unit.Value;
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao inativar endereços.", ex); } 
         }
     }
 }

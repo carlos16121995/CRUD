@@ -1,4 +1,5 @@
 ﻿using CRUD.Domain.Entities.Localities;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Domain.Infra.Responses;
 using CRUD.Infrastructure.Extensions;
 using CRUD.Infrastructure.Persistence;
@@ -41,7 +42,7 @@ namespace CRUD.Application.Features.Localities.States.Queries.GetState
                         Activated = state.Activated
                     }).GetPagedListAsync<BasePagedResponse<GetStateQueryResponse>, GetStateQueryResponse>(request);
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao recuperar estados.", ex); }
         }
 
         private static Expression<Func<State, bool>> Where(GetStateQuery query)

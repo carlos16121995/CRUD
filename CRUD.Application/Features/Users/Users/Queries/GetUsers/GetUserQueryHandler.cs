@@ -1,5 +1,6 @@
 ﻿using CRUD.Application.Features.Users.Addresses.Queries.GetAddress;
 using CRUD.Domain.Entities.Users;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Domain.Infra.Responses;
 using CRUD.Infrastructure.Extensions;
 using CRUD.Infrastructure.Persistence;
@@ -47,7 +48,7 @@ namespace CRUD.Application.Features.Users.Users.Queries.GetUsers
                         Addresses = request.Address ? MapAddress(user) : new()
                     }).GetPagedListAsync<BasePagedResponse<GetUserQueryResponse>, GetUserQueryResponse>(request);
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao recuperar usuários.", ex); }
         }
 
         private static List<GetAddressQueryResponse> MapAddress(User user) => user.Addresses.Where(a => !a.Deleted)

@@ -1,4 +1,5 @@
 ﻿using CRUD.Domain.Entities.Users.Addresses;
+using CRUD.Domain.Infra.Exceptions;
 using CRUD.Domain.Infra.Responses;
 using CRUD.Infrastructure.Extensions;
 using CRUD.Infrastructure.Persistence;
@@ -52,7 +53,7 @@ namespace CRUD.Application.Features.Users.Addresses.Queries.GetAddress
                         Activated = a.Activated
                     }).GetPagedListAsync<BasePagedResponse<GetAddressQueryResponse>, GetAddressQueryResponse>(request);
             }
-            catch (Exception ex) { throw new Exception(); } // TODO: Mensagens
+            catch (Exception ex) { throw new CrudException("Falha ao recuperar endereços.", ex); }
         }
 
         private static Expression<Func<Address, bool>> Where(GetAddressQuery query)
