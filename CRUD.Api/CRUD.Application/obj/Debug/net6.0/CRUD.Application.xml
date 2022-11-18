@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CRUD.Application</name>
+    </assembly>
+    <members>
+        <member name="T:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQuery">
+            <summary>
+            Objeto para recuperar cidades
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQuery.Id">
+            <summary>
+            Identificador da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQuery.UF">
+            <summary>
+            UF do estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQuery.Name">
+            <summary>
+            Nome da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQuery.Activated">
+            <summary>
+            Filtro para recuperar cidades por estado da entidade. Ao não informar o estado da entidade retorna ativos e inativos.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryHandler.Handle(CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQuery,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryResponse">
+            <summary>
+            Objeto para recuperar cidades
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryResponse.Id">
+            <summary>
+            Identificador da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryResponse.Name">
+            <summary>
+            Nome da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryResponse.UF">
+            <summary>
+            Uf do estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryResponse.Activated">
+            <summary>
+            Estado da entidade
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Localities.Cities.Queries.GetCities.GetCityQueryValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQuery">
+            <summary>
+            Objeto para recuperar estados
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQuery.UF">
+            <summary>
+            UF do estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQuery.Name">
+            <summary>
+            Nome da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQuery.Activated">
+            <summary>
+            Filtro para recuperar cidades por estado da entidade. Ao não informar o estado da entidade retorna ativos e inativos.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryHandler.Handle(CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQuery,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryResponse">
+            <summary>
+            Objeto para recueprar estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryResponse.UF">
+            <summary>
+            Uf do estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryResponse.Name">
+            <summary>
+            Nome da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryResponse.Activated">
+            <summary>
+            Estado da entidade.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Localities.States.Queries.GetState.GetStateQueryValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommand">
+            <summary>
+            Objeto para remover um endereço
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommand.GetDelete">
+            <summary>
+            Método para recuperar ação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommand.SetDelete(System.Boolean)">
+            <summary>
+            Método para setar ação
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommand.Id">
+            <summary>
+            Identificador do endereço a ser inativado.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommandHandler.Handle(CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InativeAddresses.InativeAddressCommandValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommand">
+            <summary>
+            Objeto para inserir endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommand.UserId">
+            <summary>
+            Identificador do usuário dono do Endereço.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommand.Data">
+            <summary>
+            Objeto contendo os dados a serem inseridos do endereço
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress">
+            <summary>
+            Objeto contendo os dados a serem inseridos do endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.CityId">
+            <summary>
+            Identificador da cidade.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.ZipCode">
+            <summary>
+            Cep referente ao endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.AddressType">
+            <summary>
+            Tipo do endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.Neighborhood">
+            <summary>
+            Bairro do endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.Street">
+            <summary>
+            Rua do endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.Number">
+            <summary>
+            Número da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.Complement">
+            <summary>
+            Complemento do endereo
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddress.Activated">
+            <summary>
+            Estado atual do endereço.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandHandler.Handle(CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandResponse.Id">
+            <summary>
+            Identificador do endereço.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressCommandValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.InsertAddresses.InsertAddressValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommand">
+            <summary>
+            Objeto para atualizar endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommand.AddressId">
+            <summary>
+            Identificador do endereço a ser atualizado.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommand.Data">
+            <summary>
+            Objeto contendo os campos a serem atualizados do endereço
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommandHandler.Handle(CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Commands.UpdateAddresses.UpdateAddressCommandValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQuery">
+            <summary>
+            Objeto para recuperar endereços
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQuery.Id">
+            <summary>
+            Filtro para recuperar endereços pelo id.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQuery.UserId">
+            <summary>
+            Filtro para recuperar endereços do usuário.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQuery.Activated">
+            <summary>
+            Filtro para recuperar endereços por estado de entidade. Ao não informar o estado da entidade retorna ativos e inativos.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryHandler.Handle(CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQuery,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse">
+            <summary>
+            Objeto para recuperar endereços
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.Id">
+            <summary>
+            Identificador do endereço
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.UserId">
+            <summary>
+            Identificador do usuário
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.CityName">
+            <summary>
+            Nome da cidade
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.UF">
+            <summary>
+            Uf do estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.StateName">
+            <summary>
+            Nome do estado
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.CreatedAt">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Addresses.Queries.GetAddress.GetAddressQueryResponse.UpdateAt">
+            <summary>
+            Data da ultima modificação
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommand">
+            <summary>
+            Objeto para inativar ou remover um usuário
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommand.GetDelete">
+            <summary>
+            Método para recuperar ação
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommand.SetDelete(System.Boolean)">
+            <summary>
+            Método para setar ação
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommand.Id">
+            <summary>
+            Identificador do usuário a ser inativado.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommandHandler.Handle(CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InativeUsers.InativeUserCommandValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommand">
+            <summary>
+            Objeto para inserir um usuário
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommand.Name">
+            <summary>
+            Nome completo do usuário.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommand.BirthDate">
+            <summary>
+            Data de aniversário do usuário.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommand.Gender">
+            <summary>
+            Gênero do usuário.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommand.Activated">
+            <summary>
+            Estado atual do usuário.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandHandler.Handle(CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandResponse">
+            <summary>
+            Objeto de retorno da insersão do usuário.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandResponse.Id">
+            <summary>
+            Identificador do usuário.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.InsertUsers.InsertUserCommandValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommand">
+            <summary>
+            Objeto para remover um usuário e seus endereços relacionados
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommand.Id">
+            <summary>
+            Identificador do usuário a ser inativado.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommandHandler.Handle(CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.RemoveUsers.RemoveUserCommandValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommand">
+            <summary>
+            Objeto para alterar informações de um usuário
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommand.Id">
+            <summary>
+            Identifiicador do usuário para alteração dos dados.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommand.Data">
+            <summary>
+            Objeto com os dados do usuário para alteração.
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommandHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommandHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommandHandler.Handle(CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommand,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommandValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Commands.UpdateUsers.UpdateUserCommandValidator.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery">
+            <summary>
+            Objeto com parâmetros para recuperar usuários
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery.Id">
+            <summary>
+            Filtro para recuperar usuários pelo id.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery.AddressId">
+            <summary>
+            Filtro para recuperar usuários pelo endereço.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery.Name">
+            <summary>
+            Filtro para recuperar usuários pelo nome.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery.Activated">
+            <summary>
+            Filtro para recuperar usuários por estado da entidade. Ao não informar o estado da entidade retorna ativos e inativos.
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery.Address">
+            <summary>
+            Parâmetro para indicar necessidade de retornar endereços 
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryHandler.#ctor(CRUD.Infrastructure.Persistence.Context)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryHandler.Handle(CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQuery,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryResponse">
+            <summary>
+            Objeto de retorno do usuário
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryResponse.Id">
+            <summary>
+            Identificador do usuário
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryResponse.CreatedAt">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryResponse.UpdateAt">
+            <summary>
+            Data da ultima atualização do registro
+            </summary>
+        </member>
+        <member name="P:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryResponse.Addresses">
+            <summary>
+            Lista de endereços do usuário retornado quando a propriedade Address for marcada como verdadeira
+            </summary>
+        </member>
+        <member name="T:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryValidator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CRUD.Application.Features.Users.Users.Queries.GetUsers.GetUserQueryValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
