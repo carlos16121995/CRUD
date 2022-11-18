@@ -10,3 +10,10 @@ C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\obj\Debug\
 C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\obj\Debug\net6.0\refint\CRUD.Application.dll
 C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\obj\Debug\net6.0\CRUD.Application.pdb
 C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\obj\Debug\net6.0\ref\CRUD.Application.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\bin\Debug\net6.0\CRUD.Application.xml
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\bin\Debug\net6.0\CRUD.Domain.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\bin\Debug\net6.0\CRUD.Infrastructure.dll
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\bin\Debug\net6.0\CRUD.Domain.pdb
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\bin\Debug\net6.0\CRUD.Infrastructure.pdb
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\obj\Debug\net6.0\CRUD.Application.csproj.CopyComplete
+C:\Users\carlos.alcantara\source\repos\CRUD\CRUD.Api\CRUD.Application\obj\Debug\net6.0\CRUD.Application.xml

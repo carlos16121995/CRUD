@@ -1,4 +1,4 @@
-﻿using CRUD.Application.Features.Users.Addressess.Queries.GetAddress;
+﻿using CRUD.Application.Features.Users.Addresses.Queries.GetAddress;
 using CRUD.Domain.Entities.Users;
 using CRUD.Domain.Infra.Responses;
 using CRUD.Infrastructure.Extensions;

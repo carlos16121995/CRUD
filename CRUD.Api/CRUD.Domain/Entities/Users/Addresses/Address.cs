@@ -1,4 +1,5 @@
-﻿using CRUD.Domain.Enums;
+﻿using CRUD.Domain.Entities.Localities;
+using CRUD.Domain.Enums;
 
 namespace CRUD.Domain.Entities.Users.Addresses
 {

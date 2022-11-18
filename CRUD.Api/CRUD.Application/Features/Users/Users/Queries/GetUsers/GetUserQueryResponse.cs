@@ -1,4 +1,4 @@
-﻿using CRUD.Application.Features.Users.Addressess.Queries.GetAddress;
+﻿using CRUD.Application.Features.Users.Addresses.Queries.GetAddress;
 using CRUD.Application.Features.Users.Users.Commands.InsertUsers;
 
 namespace CRUD.Application.Features.Users.Users.Queries.GetUsers

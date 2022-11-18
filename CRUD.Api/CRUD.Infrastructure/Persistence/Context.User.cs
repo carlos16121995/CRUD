@@ -1,4 +1,5 @@
-﻿using CRUD.Domain.Entities.Users;
+﻿using CRUD.Domain.Entities.Localities;
+using CRUD.Domain.Entities.Users;
 using CRUD.Domain.Entities.Users.Addresses;
 using Microsoft.EntityFrameworkCore;
 
