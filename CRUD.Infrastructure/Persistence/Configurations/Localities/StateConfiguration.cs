@@ -9,7 +9,7 @@ namespace CRUD.Infrastructure.Persistence.Configurations.Localities
         public void Configure(EntityTypeBuilder<State> builder)
         {
             builder
-                .ToTable(nameof(State), nameof(Users))
+                .ToTable(nameof(State), nameof(Localities))
                 .HasKey((b) => b.UF);
 
             builder

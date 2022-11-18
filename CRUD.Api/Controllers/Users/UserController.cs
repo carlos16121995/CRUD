@@ -8,16 +8,38 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+//TODO: Configurar mediator
+//TODO: Configurar fluent
+//TODO: Configurar swagger
+//TODO: Configurar contexto
+//TODO: Gerar migrations
+//TODO: Estruturar testes unitários
+//TODO: Desenvolver testes unitários
+
 namespace CRUD.Api.Controllers
 {
-    [Route("api/users")]
+    /// <summary>
+    /// 
+    /// </summary>
+    [ApiVersion("1")]
+    [Route("v{version:apiVersion}/users")]
     [AllowAnonymous]
     public partial class UserController : BaseController
     {
         private readonly IMediator _mediator;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="mediator"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public UserController(IMediator mediator) => _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
+        /// <summary>
+        /// Endpoint para inserir usuários
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesDefaultResponseType(typeof(BaseResponse<InsertUserCommandResponse>))]
         public async Task<IActionResult> Insert(InsertUserCommand request)
@@ -35,6 +57,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para alterar usuários
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("{Id}")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Update([FromRoute] UpdateUserCommand request)
@@ -52,6 +79,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para inativar usuários
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("{Id}/inactivate")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Inactivate([FromRoute] InativeUserCommand request)
@@ -70,6 +102,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para remover localmente usuário
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("{Id}/remove")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Remove([FromRoute] InativeUserCommand request)
@@ -88,6 +125,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Remove definitivamente o usuário
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpDelete("{Id}")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Delete([FromRoute] RemoveUserCommand request)
@@ -105,6 +147,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Recuperar as informações do usuário
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet]
         [ProducesDefaultResponseType(typeof(BasePagedResponse<GetUserQueryResponse>))]
         public async Task<IActionResult> Get([FromQuery] GetUserQuery request)

@@ -9,7 +9,11 @@ namespace CRUD.Infrastructure.Persistence.Configurations.Localities
         public void Configure(EntityTypeBuilder<City> builder)
         {
             builder
-                .ToTable(nameof(City), nameof(Users));
+                .ToTable(nameof(City), nameof(Localities));
+
+            builder
+                .Property(e => e.Id)
+                .ValueGeneratedNever();
 
             builder
                .Property((b) => b.Name)

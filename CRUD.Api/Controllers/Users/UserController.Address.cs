@@ -9,6 +9,11 @@ namespace CRUD.Api.Controllers
 {
     public partial class UserController
     {
+        /// <summary>
+        /// Endpoint para inserir endereço
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost("{UserId}/addressess")]
         [ProducesDefaultResponseType(typeof(BaseResponse<InsertAddressCommandResponse>))]
         public async Task<IActionResult> Insert([FromRoute] InsertAddressCommand request)
@@ -26,6 +31,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para alterar endereço
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("addressess/{Id}")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Update([FromRoute] UpdateAddressCommand request)
@@ -43,6 +53,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para inativar endereço
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("addressess/{Id}/inactivate")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Inactivate([FromRoute] InativeAddressCommand request)
@@ -61,6 +76,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para remover logicamente o endereço
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("addressess/{Id}/remove")]
         [ProducesDefaultResponseType(typeof(BaseResponse<string>))]
         public async Task<IActionResult> Remove([FromRoute] InativeAddressCommand request)
@@ -79,6 +99,11 @@ namespace CRUD.Api.Controllers
             return Result(response);
         }
 
+        /// <summary>
+        /// Endpoint para recuperar endereços
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet("addressess")]
         [ProducesDefaultResponseType(typeof(BasePagedResponse<GetAddressQueryResponse>))]
         public async Task<IActionResult> Get([FromQuery] GetAddressQuery request)

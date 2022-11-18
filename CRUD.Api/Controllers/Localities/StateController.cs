@@ -6,14 +6,28 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD.Api.Controllers.Localities
 {
-    [Route("api/states")]
+    /// <summary>
+    /// 
+    /// </summary>
+    [ApiVersion("1")]
+    [Route("v{version:apiVersion}/states")]
     [AllowAnonymous]
     public class StateController : BaseController
     {
         private readonly IMediator _mediator;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="mediator"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public StateController(IMediator mediator) => _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
+        /// <summary>
+        /// Endpoint para recuperar estados
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet]
         [ProducesDefaultResponseType(typeof(BasePagedResponse<GetStateQueryResponse>))]
         public async Task<IActionResult> Get([FromQuery] GetStateQuery request)

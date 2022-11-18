@@ -7,12 +7,12 @@ namespace CRUD.Infrastructure.Persistence
     {
         public Context(DbContextOptions<Context> opcoes) : base(opcoes) { }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
 
-            builder.ApplyConfigurationsFromAssembly(typeof(UserConfiguration).Assembly,
-                    (type) => (type.Namespace ?? "").Contains("Configuracoes"));
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserConfiguration).Assembly,
+                    (type) => (type.Namespace ?? "").Contains("Configurations"));
         }
     }
 }

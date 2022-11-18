@@ -6,14 +6,28 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD.Api.Controllers.Localities
 {
-    [Route("api/cities")]
+    /// <summary>
+    /// 
+    /// </summary>
+    [ApiVersion("1")]
+    [Route("v{version:apiVersion}/cities")]
     [AllowAnonymous]
     public class CityController : BaseController
     {
         private readonly IMediator _mediator;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="mediator"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public CityController(IMediator mediator) => _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
+        /// <summary>
+        /// Endpoint para recuperar cidades
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet]
         [ProducesDefaultResponseType(typeof(BasePagedResponse<GetCityQueryResponse>))]
         public async Task<IActionResult> Get([FromQuery] GetCityQuery request)

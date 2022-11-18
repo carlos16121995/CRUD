@@ -10,6 +10,7 @@ namespace CRUD.Api.Controllers
     /// 
     /// </summary>
     [ApiController]
+    [Route("api")]
     [Produces("application/json", new string[] { "application/xml" })]
     public class BaseController : Controller
     {
