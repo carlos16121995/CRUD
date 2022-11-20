@@ -30,8 +30,9 @@ namespace CRUD.Application.Features.Users.Users.Commands.RemoveUsers
         {
             try
             {
-                var user = await _context.Users.FirstAsync(u => u.Id == request.Id, cancellationToken: cancellationToken);
+                var user = await _context.Users.Include(u=> u.Addresses).FirstAsync(u => u.Id == request.Id, cancellationToken: cancellationToken);
                 _context.Users.Remove(user);
+                await _context.SaveChangesAsync(cancellationToken);
 
                 return Unit.Value;
             }

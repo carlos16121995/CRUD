@@ -5,7 +5,11 @@ namespace CRUD.Infrastructure.Persistence
 {
     public partial class Context : DbContext
     {
-        public Context(DbContextOptions<Context> opcoes) : base(opcoes) { }
+        public Context(DbContextOptions<Context> opcoes) : base(opcoes)
+        {
+            if (opcoes is null)
+                throw new ArgumentNullException(nameof(opcoes));
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

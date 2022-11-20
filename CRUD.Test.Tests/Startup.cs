@@ -1,13 +1,19 @@
-﻿using CRUD.Application;
-using CRUD.Infrastructure.Persistence;
-using CRUD.Test.Core.Extensions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Globalization;
+using Xunit;
 
+[assembly: CollectionBehavior(CollectionBehavior.CollectionPerAssembly)]
 namespace CRUD.Test.Tests
 {
+    using CRUD.Application;
+    using CRUD.Infrastructure.Persistence;
+    using CRUD.Test.Core.DataBaseSeeder;
+    using CRUD.Test.Core.Extensions;
+    using CRUD.Test.Core.Seeders.Localities;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+
     public static class Startup
     {
         public static void ConfigureServices(IServiceCollection services, HostBuilderContext hostBuilder)
@@ -23,11 +29,10 @@ namespace CRUD.Test.Tests
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
-            provider.SeedInMemoryDatabase();
-        }
+            provider.InitializeDatabase<Context, StateSeeder>();
 
-        public static void ConfigureHost(IHostBuilder hostBuilder)
-            => hostBuilder.ConfigureHostConfiguration((cb)
-                => cb.AddJsonFile("appsettings.json"));
+            services.AddHttpContextAccessor()
+                        .TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        }
     }
 }

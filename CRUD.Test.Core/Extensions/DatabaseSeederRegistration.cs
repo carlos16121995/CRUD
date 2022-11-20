@@ -4,13 +4,13 @@
 
 using CRUD.Infrastructure.Persistence;
 using CRUD.Test.Core.DataBaseSeeder;
-using Microsoft.EntityFrameworkCore;
+using CRUD.Test.Core.Seeders.Localities;
 
 namespace CRUD.Test.Core.Extensions
 {
     public static class DatabaseSeederRegistration
     {
         public static void SeedInMemoryDatabase(this IServiceProvider provider)
-            => provider.InitializeDatabase<Context, AvatarSeeder>();
+            => provider.InitializeDatabase<Context, StateSeeder>();
     }
 }

@@ -29,11 +29,11 @@ namespace CRUD.Test.Core.DataBaseSeeder
                 context.Database.Migrate();
             }
 
-            mappingTypes = mappingTypes!
+            mappingTypes = mappingTypes
                 .OrderBy((mt) =>
                 {
                     var instancia = Activator.CreateInstance(mt);
-                    ; var ordemSTR = instancia.GetType().GetProperty("Ordem").GetValue(instancia).ToString();
+                    var ordemSTR = instancia.GetType().GetProperty("Ordem").GetValue(instancia).ToString();
 
                     _ = int.TryParse(ordemSTR, out var ordemINT);
 
